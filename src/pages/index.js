@@ -235,9 +235,9 @@ const IndexPage = () => (
         <div className="w-100">
           <h2 className="mb-5">Interests</h2>
           <p>
-            When I'm not coding, Im usually spending time with my family.
+            When I'm not coding, I'm usually spending time with my family.
             My son was born in August 2020. He gives me great joy. The events
-            of the past year have made engaging in outdoor activites more challegning.
+            of the past year have made engaging in outdoor activites more challenging.
             However, I still find a way to get some sun playing tennis or biking with the family.
           </p>
           <p className="mb-0">
