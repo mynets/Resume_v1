@@ -51,6 +51,22 @@ const IndexPage = () => (
 
           <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div className="resume-content">
+              <h3 className="mb-0">FRONT DESK/ROVER</h3>
+              <div className="subheading mb-3">FIRST SERVICE RESIDENTIAL</div>
+              <p>
+              • Nightly patrols of high rise condominium and townhomes
+              • Daily written reports on all violation of law, company or guard regulations learned of or witnessed  
+              • Answer calls and assist residents with the scheduling of amenities 
+              • Verify all vehicles on premise have barcode and decal stickers.
+              </p>
+            </div>
+            <div className="resume-date text-md-right">
+              <span className="text-primary">April 2020 – Present</span>
+            </div>
+          </div>
+
+          <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div className="resume-content">
               <h3 className="mb-0">SOFTWARE DEVELOPER</h3>
               <div className="subheading mb-3">MOORE LLC</div>
               <p>
@@ -125,6 +141,18 @@ const IndexPage = () => (
         <div className="w-100">
           <h2 className="mb-5">Education</h2>
 
+          <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div className="resume-content">
+              <h3 className="mb-0">Oral Roberts University</h3>
+              <div className="subheading mb-3">Masters of Divinity</div>
+              
+              
+            </div>
+            <div className="resume-date text-md-right">
+              <span className="text-primary">June 2016</span>
+            </div>
+          </div>  
+          
           <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div className="resume-content">
               <h3 className="mb-0">City University of New York - Lehman College</h3>
