@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
+import VisitTest from './VisitCounter/VisitTest'
 
 import avatar from '../assets/images/avatar.png';
 import config from '../../config';
+
+
+
+
 
 export class Sidebar extends Component {
   constructor(props) {
@@ -18,8 +23,31 @@ export class Sidebar extends Component {
         { content: 'Awards', href: 'awards' },
       ],
       isCollapsed: true,
+      location : "{\"Site\" : \"resume.diquanmoore.com\"}",
+      currentCount : ""
+       
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
+  }
+  async componentDidMount(){
+    //request to get and increment current visitor count
+    const usersResponse = await fetch('https://hlvv6y74p0.execute-api.us-east-1.amazonaws.com/Beta/visitor',
+        {
+          method: 'POST',
+            body: this.state.location,
+            headers : {
+                'Accept' : 'application/json',
+                
+            }
+               
+        }
+        
+    );
+    
+    const usersBody = await usersResponse.json();
+    console.log(this.state.location)
+
+    this.setState({currentCount : usersBody.count});
   }
 
   toggleNavbar() {
@@ -29,7 +57,8 @@ export class Sidebar extends Component {
   }
 
   render() {
-    const { tabs, isCollapsed } = this.state;
+    const { tabs, isCollapsed,currentCount } = this.state;
+    
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
@@ -80,10 +109,14 @@ export class Sidebar extends Component {
                 </li>
               );
             })}
+            
           </Scrollspy>
         </div>
+        
+        <VisitTest visitCount = {currentCount} />
+        
       </nav>
-    );
+   );
   }
 }
 
